@@ -14,6 +14,11 @@ import { AdminComponent } from './admin/admin.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthInterception } from './login/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateFlightComponent } from './admin/create-flight/create-flight.component';
+import {MatCardModule} from '@angular/material/card';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { AllFlightsComponent } from './admin/all-flights/all-flights.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UnauthFlightsComponent,
     UserComponent,
     AdminComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CreateFlightComponent,
+    AllFlightsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatCardModule,
+    
   ],
   providers: [
     {

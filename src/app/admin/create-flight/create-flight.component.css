@@ -1,0 +1,68 @@
+.center {
+    height: 500px;
+    width: 850px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+   background-color:white
+    
+
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: black!important;
+}
+
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black!important;
+    
+}
+
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: black!important;
+}
+
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+    color: black!important;
+    opacity: 0.8!important;
+}
+::ng-deep .mat-input-element {
+    caret-color: black!important;
+}
+
+
+::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+    caret-color: black!important;
+}
+
+
+::ng-deep .mat-form-field-label {
+    color: rgba(0,0,0,.6)!important;
+    
+}
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: black!important;
+}
+
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: black!important;
+}
+::ng-deep .md-datepicker-input-container {
+    width: 700px!important
+}
+::ng-deep .mat-input-element { height: 10px; }
+
+
+.class1{
+    background-image: url(../../../assets/img/about-us-image.jpg);
+   
+}

@@ -21,4 +21,10 @@ export class AdminComponent implements OnInit {
 Proba(){
   this.registrationService.Proba().subscribe()
 }
+CreateFlight(){
+  this.router.navigate(["/admin/create-flight"])
+}
+AllFlights(){
+  this.router.navigate(["/admin/all-flights"])
+}
 }
