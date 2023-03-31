@@ -18,8 +18,6 @@ export class UserComponent implements OnInit {
     localStorage.removeItem('role');
     this.router.navigate(["/"]);
 }
-Proba(){
-  this.registrationService.Proba().subscribe()
-}
+
 
 }

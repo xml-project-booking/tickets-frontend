@@ -12,6 +12,9 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'flights', component: UnauthFlightsComponent},
   { path: 'user', component: UserComponent,
+    children: [
+      { path: 'flightSearch', component:UnauthFlightsComponent}
+    ],
     data: {
     allowedRoles: ['USER']
     },

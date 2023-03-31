@@ -1,1 +1,83 @@
-<p>unauth-flights works!</p>
+<div class="header" *ngIf="loggedUser==false">
+    <nav>
+        <div class="nav-links">
+              <ul>
+                  <li><a href="/">Login</a></li>
+              </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
+
+    <div class="card">
+        <h1 class="cardTitle">  Available flights  </h1>
+        <div class="search">
+            <table style="margin-left: 70px;">
+                <mat-form-field appearance="fill">
+                    <mat-label>From</mat-label>
+                    <input matInput [(ngModel)]="search.from">
+                    <mat-icon matPrefix>flight_takeoff</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>To</mat-label>
+                    <input matInput [(ngModel)]="search.to">
+                    <mat-icon matPrefix>flight_land</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Departure date</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="search.date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker matPrefix #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="lastField" appearance="fill">
+                    <mat-label>Passengers</mat-label>
+                    <input type="number" matInput [(ngModel)]="search.passengers">
+                </mat-form-field>
+                <button class="confirmButton" mat-stroked-button app:backgroundTint="#e0e7ff" style="background-color:#e0e7ff; width: 100px; margin-right: 15px;" (click)="Search()">
+                        Search
+                        <mat-icon>search</mat-icon>
+                </button>
+            </table>
+        <br>
+        <br>
+        <div class="searchTable">
+            <div class="container" *ngIf="clickedS==true">
+                tabela
+                <!-- <table mat-table [dataSource]="dataSource">
+                    <ng-container matColumnDef="From">
+                        <th mat-header-cell *matHeaderCellDef class="cell-center"> From </th>
+                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.from}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="To">
+                        <th mat-header-cell *matHeaderCellDef class="cell-center"> To </th>
+                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.to}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Date">
+                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Date </th>
+                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.date}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Seats left">
+                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Seats left </th>
+                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.seats}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Price per person">
+                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Price per person </th>
+                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.price}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Total price">
+                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Total price </th>
+                        <td mat-cell *matCellDef="let appointment" class="cell-center">{{flight.total}}</td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table> -->
+            </div>
+        </div>
+        </div>
+        
+    </div>
+
+
+</div>
+

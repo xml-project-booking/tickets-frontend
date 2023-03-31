@@ -1,3 +1,4 @@
+import { UnauthFlightsComponent } from './../../unauth-flights/unauth-flights.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes } from '@angular/router';
@@ -13,13 +14,14 @@ const routes: Routes = [
     },
     canActivate:[AuthGuard],
     children: [
-      //  { path: 'home', component:HomePageClientComponent},
+        { path: 'flightSearch', component:UnauthFlightsComponent},
     ]
   }
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule
   ]
