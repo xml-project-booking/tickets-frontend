@@ -28,6 +28,11 @@ export class FlightserviceService {
     return this.http.get<Flight[]>(this.apiHost+'/admin/get-all-flights',{headers:this.headers})
   }
 
+
+  getAirlineFlightById(flightID:string):Observable<Flight>{
+    return this.http.post<Flight>(this.apiHost+'/admin/get-flight-byId/'+flightID,flightID,{ headers: this.headers })
+  }
+
   searchFlights(search:FlightSearch):Observable<Flight[]>{
     return this.http.get<Flight[]>(this.apiHost+'/search'+ '?From=' + search.from + '&To=' + search.to + '&Date=' + search.date + '&Passengers=' + search.passengers ,{headers:this.headers})
   }
