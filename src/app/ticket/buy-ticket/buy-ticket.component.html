@@ -13,11 +13,11 @@
     
     <div class="ticket-card">
   <div class="ticket-info">
-    <p><strong>From:</strong> {{this.fromDestination}}</p>
-    <p><strong>To:</strong> {{this.toDestination}}</p>
-    <p><strong>Date:</strong> {{this.dateOfFlight}}</p>
-    <p><strong>Time:</strong> {{this.timeOfFlight}}</p>
-    <p><strong>Price:</strong> {{this.priceOfFlight}}</p>
+    <p><strong>From:</strong> {{this.flight.from}}</p>
+    <p><strong>To:</strong> {{this.flight.to}}</p>
+    <p><strong>Date:</strong> {{this.flight.date | date:'longDate'}}</p>
+    <p><strong>Time:</strong> {{this.flight.date | date:'HH:mm'}}</p>
+    <p><strong>Price:</strong> {{this.flight.price}}</p>
     <p>
       <strong>Number of seats:</strong>
       <input type="number" min="1" value="1" [(ngModel)] = "numberOfSeats">

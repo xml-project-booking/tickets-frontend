@@ -30,7 +30,7 @@ export class FlightserviceService {
 
 
   getAirlineFlightById(flightID:string):Observable<Flight>{
-    return this.http.post<Flight>(this.apiHost+'/admin/get-flight-byId/'+flightID,flightID,{ headers: this.headers })
+    return this.http.get<Flight>(this.apiHost+'/get-flight-byId/'+flightID,{ headers: this.headers })
   }
 
   searchFlights(search:FlightSearch):Observable<Flight[]>{

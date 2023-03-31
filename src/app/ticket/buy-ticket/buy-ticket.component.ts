@@ -10,14 +10,10 @@ import { TicketService } from 'src/app/services/ticket.service';
 })
 export class BuyTicketComponent implements OnInit {
 
-  flight: Flight | undefined;
-  flightId: string = "";
-  fromDestination: string = "Beograd";
-  toDestination: string = "Bukarest";
-  dateOfFlight: string = "23.02.2022";
-  timeOfFlight: string = "12:00";
-  priceOfFlight: string = "500$";
+  flight: Flight =new Flight();
+  flightId: string = "64271a09368b345c28ce9ab4";
   numberOfSeats: number = 1;
+  array:string[] = []
 
   constructor(private ticketService: TicketService, private flightService: FlightserviceService) {}
 
@@ -25,10 +21,11 @@ export class BuyTicketComponent implements OnInit {
     // Get the selected flight from the service
     this.flightId = this.ticketService.getSelectedFlight();
     
-    this.flightService.getAirlineFlightById(this.flightId).subscribe(res =>
+    this.flightService.getAirlineFlightById(this.flightId).subscribe((res) =>{
       
+      console.log(res)
       this.flight = res
-    );
+    });
   }
 
   buyTicket()
