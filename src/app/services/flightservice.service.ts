@@ -1,3 +1,4 @@
+import { FlightSearch } from './../model/flightSearch.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -25,5 +26,9 @@ export class FlightserviceService {
 
   getAllAirlineFlights():Observable<Flight[]>{
     return this.http.get<Flight[]>(this.apiHost+'/admin/get-all-flights',{headers:this.headers})
+  }
+
+  searchFlights(search:FlightSearch):Observable<Flight[]>{
+    return this.http.get<Flight[]>(this.apiHost+'/search'+ '?From=' + search.from + '&To=' + search.to + '&Date=' + search.date + '&Passengers=' + search.passengers ,{headers:this.headers})
   }
 }

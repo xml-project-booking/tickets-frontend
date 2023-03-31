@@ -18,9 +18,6 @@ export class AdminComponent implements OnInit {
     localStorage.removeItem('role');
     this.router.navigate(["/"]);
 }
-Proba(){
-  this.registrationService.Proba().subscribe()
-}
 CreateFlight(){
   this.router.navigate(["/admin/create-flight"])
 }

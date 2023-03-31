@@ -5,6 +5,7 @@ export class Flight {
     public freeseats:number=0;
     public Date:Date = new Date()
     public departureTime:String ='';
+    public totalPrice: number = 0;
 
 
     public constructor(obj?: any) {

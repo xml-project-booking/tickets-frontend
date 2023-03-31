@@ -27,7 +27,7 @@ const routes: Routes = [
     data: {
     allowedRoles: ['ADMIN']
     },
-    //canActivate: [AuthGuard] },
+    canActivate: [AuthGuard] 
   },
   { path: 'registration', component:RegistrationComponent}
   ];

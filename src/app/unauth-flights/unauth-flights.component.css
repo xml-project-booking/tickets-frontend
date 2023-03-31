@@ -68,9 +68,11 @@
 .mat-form-field {
     margin-right: 5px;
 }
-.searchTable {
-    margin-left: 10px;
+
+.tableC {
+    width: 800px;
+    margin-left: 150px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: pink;
+    background-color: white;
 }
