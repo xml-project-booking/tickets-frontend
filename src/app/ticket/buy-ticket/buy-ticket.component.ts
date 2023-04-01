@@ -13,7 +13,7 @@ export class BuyTicketComponent implements OnInit {
 
   flight: Flight = new Flight();
   ticket: Ticket = new Ticket();
-  flightId: string = "64271a09368b345c28ce9ab4"; //TODO 
+  flightId: string = ""; //TODO 
   userId: string = "6427199d368b345c28ce9ab2"; //TODO
   numberOfSeats: number = 1;
   array:string[] = []

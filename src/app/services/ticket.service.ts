@@ -7,11 +7,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TicketService {
+  selectedFlightId: string ='';
 
   getSelectedFlight(): string {
-    return "64271a09368b345c28ce9ab4";
+    return this.selectedFlightId;
   }
 
+  setSelectedFlight(flightId: string): void {
+    this.selectedFlightId = flightId;
+  }
   
   createTicket(ticket: Ticket): Observable<Ticket> {
     console.log(JSON.stringify(ticket))
