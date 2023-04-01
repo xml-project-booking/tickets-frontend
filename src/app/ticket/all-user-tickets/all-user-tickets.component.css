@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-column-flightFrom {
+    width: 20%;
+  }
+  
+  .mat-column-flightTo {
+    width: 20%;
+  }
+  
+  .mat-column-date {
+    width: 15%;
+  }
+  
+  .mat-column-time {
+    width: 15%;
+  }
+  
+  .mat-column-numSeats {
+    width: 15%;
+  }
+  
