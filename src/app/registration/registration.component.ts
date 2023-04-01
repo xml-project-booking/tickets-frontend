@@ -66,14 +66,14 @@ export class RegistrationComponent implements OnInit {
   }
   private validationText(){
     if (this.registrationUser?.email == '') {  this.validInfo = 'You must enter email'; return; }
-   if (this.registrationUser?.password =='') { this.validInfo = 'You must enter password'; return;}
-   if (this.passConfirm == '') {this.validInfo = 'You must reenter your password'; return;}
-   if (this.registrationUser?.password != this.passConfirm) {this.validInfo = 'Passwords are not the same'; return;}
-   if (this.registrationUser?.name == '') {this.validInfo = 'You must enter first name'; return;}
-   if (this.registrationUser?.surname == '') {this.validInfo = 'You must enter last name'; return;}
-   if (this.registrationUser?.phoneNumber == '') {this.validInfo = 'You must enter phone number'; return;}
-   if (this.registrationUser?.username == '') {this.validInfo = 'You must enter username'; return;}
-   if (this.registrationUser?.birthDate == '') {this.validInfo = 'You must enter birth date'; return;}
+    if (this.registrationUser?.password =='') { this.validInfo = 'You must enter password'; return;}
+    if (this.passConfirm == '') {this.validInfo = 'You must reenter your password'; return;}
+    if (this.registrationUser?.password != this.passConfirm) {this.validInfo = 'Passwords are not the same'; return;}
+    if (this.registrationUser?.name == '') {this.validInfo = 'You must enter first name'; return;}
+    if (this.registrationUser?.surname == '') {this.validInfo = 'You must enter last name'; return;}
+    if (this.registrationUser?.phoneNumber == '') {this.validInfo = 'You must enter phone number'; return;}
+    if (this.registrationUser?.username == '') {this.validInfo = 'You must enter username'; return;}
+    if (this.registrationUser?.birthDate == '') {this.validInfo = 'You must enter birth date'; return;}
    
   }
 
