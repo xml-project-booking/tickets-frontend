@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Buy Airplane Ticket</title>
+	<!-- Angular Material styles -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@angular/material/prebuilt-themes/indigo-pink.css">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="buy-ticket.component.css">
+</head>
+
+<body>
+    
+    <div class="ticket-card">
+  <div class="ticket-info">
+    <p><strong>From:</strong> {{this.flight.from}}</p>
+    <p><strong>To:</strong> {{this.flight.to}}</p>
+    <p><strong>Date:</strong> {{this.flight.date | date:'longDate'}}</p>
+    <p><strong>Time:</strong> {{this.flight.date | date:'HH:mm'}}</p>
+    <p><strong>Price:</strong> {{this.flight.price}}</p>
+    <p>
+      <strong>Number of seats:</strong>
+      <input type="number" min="1" value="1" [(ngModel)] = "numberOfSeats">
+    </p>
+  </div>
+  <button class="buy-ticket-btn" (click)="buyTicket()">Buy Ticket</button>
+</div>
+
+  
+      
+
+	<!-- Angular Material scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/@angular/material@13.0.0/bundles/material.umd.min.js"></script>
+</body>
+</html>

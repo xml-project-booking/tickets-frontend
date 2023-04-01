@@ -18,6 +18,9 @@ import { CreateFlightComponent } from './admin/create-flight/create-flight.compo
 import {MatCardModule} from '@angular/material/card';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { AllFlightsComponent } from './admin/all-flights/all-flights.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { AllUserTicketsComponent } from './ticket/all-user-tickets/all-user-tickets.component';
+import { BuyTicketComponent } from './ticket/buy-ticket/buy-ticket.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { AllFlightsComponent } from './admin/all-flights/all-flights.component';
     AdminComponent,
     RegistrationComponent,
     CreateFlightComponent,
-    AllFlightsComponent
+    AllFlightsComponent,
+    TicketComponent,
+    AllUserTicketsComponent,
+    BuyTicketComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@
       
          <mat-form-field appearance="outline" style="margin-right:80px;width:300px">
           <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker" [(ngModel)]="flight.Date">
+          <input matInput [matDatepicker]="picker" [(ngModel)]="flight.date">
           <mat-hint>DD/MM/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>

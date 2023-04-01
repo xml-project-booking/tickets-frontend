@@ -8,12 +8,14 @@ import { UnauthFlightsComponent } from './unauth-flights/unauth-flights.componen
 import { UserComponent } from './user/user.component';
 import { CreateFlightComponent } from './admin/create-flight/create-flight.component';
 import { AllFlightsComponent } from './admin/all-flights/all-flights.component';
+import { BuyTicketComponent } from './ticket/buy-ticket/buy-ticket.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'flights', component: UnauthFlightsComponent},
   { path: 'user', component: UserComponent,
     children: [
-      { path: 'flightSearch', component:UnauthFlightsComponent}
+      { path: 'flightSearch', component:UnauthFlightsComponent},
+      { path: 'buy-ticket', component:BuyTicketComponent}
     ],
     data: {
     allowedRoles: ['USER']

@@ -3,7 +3,7 @@ export class Flight {
     public to:String = '';
     public price:number = 0;
     public freeseats:number=0;
-    public Date:Date = new Date()
+    public date:Date = new Date()
     public departureTime:String ='';
     public totalPrice: number = 0;
 
@@ -14,7 +14,7 @@ export class Flight {
             this.from=obj.from;
             this.to = obj.to;
             this.price = obj.price;
-            this.Date = obj.Date;
+            this.date = obj.date;
             this.departureTime = obj.departureTime;
         }
     }

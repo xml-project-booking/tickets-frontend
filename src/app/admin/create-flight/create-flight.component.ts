@@ -17,8 +17,8 @@ export class CreateFlightComponent implements OnInit {
 
   public createFlight(){
     this.array = this.flight.departureTime.split(":")
-    this.flight.Date.setHours(parseInt(this.array[0]))
-    this.flight.Date.setMinutes(parseInt(this.array[1]))
+    this.flight.date.setHours(parseInt(this.array[0]))
+    this.flight.date.setMinutes(parseInt(this.array[1]))
 
     console.log(this.flight)
     this.flightService.createAirlineFlight(this.flight).subscribe()
