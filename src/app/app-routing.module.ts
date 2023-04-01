@@ -9,13 +9,15 @@ import { UserComponent } from './user/user.component';
 import { CreateFlightComponent } from './admin/create-flight/create-flight.component';
 import { AllFlightsComponent } from './admin/all-flights/all-flights.component';
 import { BuyTicketComponent } from './ticket/buy-ticket/buy-ticket.component';
+import { AllUserTicketsComponent } from './ticket/all-user-tickets/all-user-tickets.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'flights', component: UnauthFlightsComponent},
   { path: 'user', component: UserComponent,
     children: [
       { path: 'flightSearch', component:UnauthFlightsComponent},
-      { path: 'buy-ticket', component:BuyTicketComponent}
+      { path: 'buy-ticket', component:BuyTicketComponent},
+      { path: 'my-tickets', component:AllUserTicketsComponent}
     ],
     data: {
     allowedRoles: ['USER']
