@@ -31,14 +31,13 @@ export class UnauthFlightsComponent implements OnInit {
 
   Search() {
     //this.clickedS = true;
-
     this.flightService.searchFlights(this.search).subscribe(res => {
       this.flights = res;
       if(this.flights){
         this.clickedS=true
       this.flights.forEach((f) => {
         f.date = new Date(new Date(f.date).getTime()! - 2 * 60 * 60 * 1000)
-        f.totalPrice = f.price * this.search.ticketnumber
+        f.totalPrice = f.price * this.search.number
       })}
       else{
         this.clickedM=true
