@@ -18,7 +18,6 @@ export class TicketService {
   }
   
   createTicket(ticket: Ticket): Observable<Ticket> {
-    console.log(JSON.stringify(ticket))
     return this.http.post<Ticket>(this.apiHost + '/user/create-ticket', ticket, { headers: this.headers });
   }
 
