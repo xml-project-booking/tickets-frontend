@@ -16,6 +16,7 @@ export class UnauthFlightsComponent implements OnInit {
 
   public search: SearchCriteria = new SearchCriteria();
   public clickedS: boolean = false;
+  public clickedM: boolean = false;
   public loggedUser: boolean = false;
   public dataSource = new MatTableDataSource<Flight>();
   public displayedColumns = ['From', 'To', 'Date',  'Price per person', 'Total price','Buy ticket'];
@@ -29,18 +30,21 @@ export class UnauthFlightsComponent implements OnInit {
   }
 
   Search() {
-    this.clickedS = true;
-    console.log(this.search)
+    //this.clickedS = true;
+
     this.flightService.searchFlights(this.search).subscribe(res => {
-      console.log(res)
       this.flights = res;
+      if(this.flights){
+        this.clickedS=true
       this.flights.forEach((f) => {
         f.date = new Date(new Date(f.date).getTime()! - 2 * 60 * 60 * 1000)
-        
-         console.log(f.id)
         f.totalPrice = f.price * this.search.ticketnumber
-      })
+      })}
+      else{
+        this.clickedM=true
+      }
       this.dataSource.data = this.flights;
+    
     })
   }
 

@@ -42,37 +42,37 @@
         <br>
         <br>
         <div class="searchTable">
-            <div *ngIf="clickedS==true">
-                <table class="tableC" mat-table [dataSource]="dataSource">
-                    <ng-container matColumnDef="From">
-                        <th mat-header-cell *matHeaderCellDef class="cell-center"> From </th>
-                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.from}}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="To">
-                        <th mat-header-cell *matHeaderCellDef class="cell-center"> To </th>
-                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.to}}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="Date">
-                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Date </th>
-                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.date | date: 'medium'}}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="Price per person">
-                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Price per person </th>
-                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.price}}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="Total price">
-                        <th mat-header-cell *matHeaderCellDef class="cell-center"> Total price </th>
-                        <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.totalPrice}}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="Buy ticket">
-                        <th mat-header-cell *matHeaderCellDef class="cell-center"> BUY </th>
-                        <td mat-cell *matCellDef="let flight" class="cell-center">        
-                        <button class="buy-ticket-btn" (click)="BuyTicket(flight.id)">Buy Ticket</button></td>
-                    </ng-container>
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-            </div>
+            <div *ngIf="clickedS;"><table class="tableC" mat-table [dataSource]="dataSource">
+                <ng-container matColumnDef="From">
+                    <th mat-header-cell *matHeaderCellDef class="cell-center"> From </th>
+                    <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.from}}</td>
+                </ng-container>
+                <ng-container matColumnDef="To">
+                    <th mat-header-cell *matHeaderCellDef class="cell-center"> To </th>
+                    <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.to}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Date">
+                    <th mat-header-cell *matHeaderCellDef class="cell-center"> Date </th>
+                    <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.date | date: 'medium'}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Price per person">
+                    <th mat-header-cell *matHeaderCellDef class="cell-center"> Price per person </th>
+                    <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.price}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Total price">
+                    <th mat-header-cell *matHeaderCellDef class="cell-center"> Total price </th>
+                    <td mat-cell *matCellDef="let flight" class="cell-center">{{flight.totalPrice}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Buy ticket">
+                    <th mat-header-cell *matHeaderCellDef class="cell-center"> BUY </th>
+                    <td mat-cell *matCellDef="let flight" class="cell-center">        
+                    <button class="buy-ticket-btn" (click)="BuyTicket(flight.id)">Buy Ticket</button></td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table></div>              
+    <div *ngIf="clickedM" ><h1 style="text-align: center;">No search results</h1></div>
+               
         </div>
         </div>
         
