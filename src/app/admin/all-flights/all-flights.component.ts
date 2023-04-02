@@ -24,6 +24,6 @@ export class AllFlightsComponent implements OnInit {
     )
   }
 
-  displayedColumns: string[] = ['from', 'to', 'date', 'time', 'price', 'delete'];
+  displayedColumns: string[] = ['from', 'to', 'date',  'price', 'delete'];
 
 }

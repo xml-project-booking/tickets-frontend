@@ -21,6 +21,7 @@ import { AllFlightsComponent } from './admin/all-flights/all-flights.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { AllUserTicketsComponent } from './ticket/all-user-tickets/all-user-tickets.component';
 import { BuyTicketComponent } from './ticket/buy-ticket/buy-ticket.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import { BuyTicketComponent } from './ticket/buy-ticket/buy-ticket.component';
     BrowserAnimationsModule,
     MaterialModule,
     MatCardModule,
+    ToastrModule.forRoot(),
+    
     
   ],
   providers: [
