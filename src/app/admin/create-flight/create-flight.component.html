@@ -30,11 +30,16 @@
      
      <br>
      
-     <mat-form-field appearance="outline" style="width: 300px;">
+     <mat-form-field appearance="outline" style="margin-right: 80px; width: 300px;">
        <mat-label>Price</mat-label>
        <input type="number" matInput [(ngModel)]="flight.price">
      </mat-form-field>
-     
+
+     <mat-form-field appearance="outline" style="width: 300px;">
+      <mat-label>Seats</mat-label>
+      <input  type="number" matInput [(ngModel)]="flight.freeseats">
+    </mat-form-field> 
+
      <br>
      
      <button mat-raised-button color="primary" style="width: 200px; margin-top: 50px;" (click)="createFlight()">Create</button>
