@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
       let role = res.role
       localStorage.setItem('Token', res.token);
       localStorage.setItem('role', role);
+      localStorage.setItem('username', this.login.username);
 
       if (role == 'USER') this.router.navigate(['/user/']);
       else if (role == 'ADMIN') this.router.navigate(['/admin/']);

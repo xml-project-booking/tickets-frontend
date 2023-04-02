@@ -1,6 +1,6 @@
 export class Ticket {
   public id:String = '';
-  public userId:String = '';
+  public userId:string = '';
   public flightId:string = '';
   public numberOfSeats:number=0;
 
